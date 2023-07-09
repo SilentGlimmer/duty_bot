@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: duty_bot
+      POSTGRES_USER: duty_bot
+      POSTGRES_DB: duty_bot
+    volumes:
+      - ./.postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    healthcheck:
+      test: PGPASSWORD=duty_bot psql -U duty_bot -p 5432 -h 127.0.0.1 -c 'select 1' >/dev/null

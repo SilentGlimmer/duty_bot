@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+alembic = '*'
+psycopg = {version = "*", extras = ["binary"]}
+psycopg2-binary = "*"
+SQLAlchemy = "*"
+fastapi = "*"
+pydantic-settings = "*"
+uvicorn = {version = "*", extras = ["standard"]}
+
+[dev-packages]
+black = {version = "*", extras = ["d"]}
+flake8 = "*"
+Flake8-pyproject = "*"
+isort = "*"
+mypy = "*"
+
+
+[requires]
+python_version = "3.11.4"
