@@ -7,10 +7,12 @@ name = "pypi"
 alembic = '*'
 psycopg = {version = "*", extras = ["binary"]}
 psycopg2-binary = "*"
-SQLAlchemy = "*"
+SQLAlchemy = {version = "*", extras = ["asyncio"]}
 fastapi = "*"
+fastapi-pagination = {version = "*", extras = ["sqlalchemy"]}
 pydantic-settings = "*"
 uvicorn = {version = "*", extras = ["standard"]}
+ipython = "*"
 
 [dev-packages]
 black = {version = "*", extras = ["d"]}
@@ -18,6 +20,12 @@ flake8 = "*"
 Flake8-pyproject = "*"
 isort = "*"
 mypy = "*"
+httpx = "*"
+pytest = "*"
+pytest-asyncio = "*"
+factory_boy = "*"
+types-factory-boy = "*"
+
 
 
 [requires]

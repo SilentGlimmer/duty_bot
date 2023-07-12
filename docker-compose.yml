@@ -13,3 +13,6 @@ services:
       - 5432:5432
     healthcheck:
       test: PGPASSWORD=duty_bot psql -U duty_bot -p 5432 -h 127.0.0.1 -c 'select 1' >/dev/null
+
+  api:
+    image:

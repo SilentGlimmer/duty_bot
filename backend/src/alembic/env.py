@@ -3,9 +3,8 @@ from logging.config import fileConfig
 from sqlalchemy import pool
 
 from alembic import context
-
 from duty.db.base import Base
-from duty.db.sync import get_engine
+from duty.db.engine import get_engine
 from duty.settings import get_settings
 from duty.user.models import *  # noqa: F403,F401
 
