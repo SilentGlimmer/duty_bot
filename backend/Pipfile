@@ -4,29 +4,38 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+# db
 alembic = '*'
-psycopg = {version = "*", extras = ["binary"]}
+psycopg = { version = "*", extras = ["binary"] }
 psycopg2-binary = "*"
-SQLAlchemy = {version = "*", extras = ["asyncio"]}
+SQLAlchemy = { version = "*", extras = ["asyncio"] }
+
+# fastapi
 fastapi = "*"
-fastapi-pagination = {version = "*", extras = ["sqlalchemy"]}
+fastapi-pagination = { version = "*", extras = ["sqlalchemy"] }
 pydantic-settings = "*"
-uvicorn = {version = "*", extras = ["standard"]}
+
+# deploy
+uvicorn = { version = "*", extras = ["standard"] }
+
+# extra
 ipython = "*"
 
 [dev-packages]
-black = {version = "*", extras = ["d"]}
+# linters
+black = { version = "*", extras = ["d"] }
 flake8 = "*"
 Flake8-pyproject = "*"
 isort = "*"
 mypy = "*"
+
+# testing
 httpx = "*"
 pytest = "*"
 pytest-asyncio = "*"
-factory_boy = "*"
-types-factory-boy = "*"
-
-
+sqlalchemy-utils = "*"
+types-sqlalchemy-utils = "*"
+faker = "*"
 
 [requires]
 python_version = "3.11.4"

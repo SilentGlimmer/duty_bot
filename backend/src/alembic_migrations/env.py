@@ -1,8 +1,8 @@
 from logging.config import fileConfig
 
+from alembic import context
 from sqlalchemy import pool
 
-from alembic import context
 from duty.db.base import Base
 from duty.db.engine import get_engine
 from duty.settings import get_settings
